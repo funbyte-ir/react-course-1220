@@ -12,3 +12,4 @@ https://nodejs.org/en/download
 ``` npx create-react-app app_name ```
 
 که در اینجا app_name نام دلخواهیست که بر روی پروژه میگذارید.
+
