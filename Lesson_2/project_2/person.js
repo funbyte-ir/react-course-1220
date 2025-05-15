@@ -1,4 +1,4 @@
-const name = "Jesse";
-const age = 40;
+const name = "Amin";
+const age = 32;
 
 export {name, age};
