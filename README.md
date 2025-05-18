@@ -20,3 +20,5 @@ https://nodejs.org/en/download
 موفق و پیروز باشید
 
 [جلسه اول](https://github.com/funbyte-ir/react-course-1220/tree/main/Lesson_1)
+
+[جلسه دوم](https://github.com/funbyte-ir/react-course-1220/tree/main/Lesson_2)
