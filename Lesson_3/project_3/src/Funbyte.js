@@ -1,12 +1,15 @@
+import Funbyte2 from "./Funbyte2";
 
 
 
-export default function Funbyte(props) {
-    console.log(props);
+export default function Funbyte({description, hello, children}) {
+    console.log(children);
     return (
         <div>
             <h1>Funbyte</h1>
-            <p>{props.description}</p>
+            <p>{description}</p>
+            <p>{hello}</p>
+            {children}
         </div>
     );
 }

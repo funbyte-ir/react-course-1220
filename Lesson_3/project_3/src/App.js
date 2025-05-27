@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Funbyte from './Funbyte';
+import Funbyte2 from './Funbyte2';
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         >
           Learn React
         </a>
-        <Funbyte description="Funbyte is a programming training institute." />
+        <Funbyte hello="asdsdfgdfg" description="Funbyte is a programming training institute." >
+
+          <Funbyte2></Funbyte2>
+        </Funbyte>
       </header>
     </div>
   );
