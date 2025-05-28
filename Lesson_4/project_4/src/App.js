@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyButton from './MyButton';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <MyButton style={{marginTop: "10px"}} >This is a button</MyButton>
       </header>
     </div>
   );
