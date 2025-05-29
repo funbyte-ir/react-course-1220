@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import MyButton from './MyButton';
+import UserCard from './UserCard';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         >
           Learn React
         </a>
-        <MyButton style={{marginTop: "10px"}} >This is a button</MyButton>
+        <MyButton  >This is a button</MyButton>
+        <UserCard    name={"amin"} family={"emrani"}/>
       </header>
     </div>
   );

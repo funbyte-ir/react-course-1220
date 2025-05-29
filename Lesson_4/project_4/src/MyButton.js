@@ -4,8 +4,11 @@ export default function MyButton({style, children}) {
         alert("Great Shot!");
       }
     return (
-        <button style={style} onClick={() => shoot()} className="button btn">
+        <>
+            <button style={style} onClick={()=>shoot()} className="button btn">
             {children}
         </button>
+        
+        </>
     );
 }
