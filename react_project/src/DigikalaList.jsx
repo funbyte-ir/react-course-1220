@@ -62,18 +62,8 @@ export default function DigikalaList() {
 
     return (
         <div style={containerStyle}>
-            <DigikalaCard />
-            <DigikalaCard />
-            <DigikalaCard />
-            <DigikalaCard />
-            <DigikalaCard />
-            <DigikalaCard />
-            
-            
-            
-            
             {mobilePhones.map((phone) => (
-                <DigikalaCard />
+                <DigikalaCard phone={phone}/>
             ))}
         </div>
     );
