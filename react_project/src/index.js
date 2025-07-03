@@ -20,7 +20,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomeWithUseEffect />} />
+          <Route index element={<Home />} />
           <Route path="films" element={<FilmsPage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="*" element={<NoPage />} />

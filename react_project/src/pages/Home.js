@@ -1,17 +1,23 @@
 import { useState } from "react";
 
 export default function Home() {
+    
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     const [timerId, setTimerId] = useState(null);
-
+    
     const handleStart = () => {
         if (!isRunning) {
             const now = Date.now();
             setIsRunning(true);
-            const id = setInterval(() => {
-                setTime(Date.now() - (now - time));
-            }, 10);
+            const id = setInterval(
+                () => {
+
+                setTime(
+                    Date.now() - (now - time)
+                );
+                },
+             10);
             setTimerId(id);
         }
     };
@@ -56,12 +62,15 @@ export default function Home() {
 
                 <button
                     onClick={handleReset}
-                    disabled={time == 0 && !isRunning}
+                    disabled={time === 0 && !isRunning}
                     className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
                 >
                     ریست
                 </button>
             </div>
+
+
+
         </div>
     );
 }
