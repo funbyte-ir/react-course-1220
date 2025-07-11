@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function HomeWithUseEffect() {
+
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     const [startTime, setStartTime] = useState(0);

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export default function Home() {
-    
+
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     const [timerId, setTimerId] = useState(null);
-    
+
     const handleStart = () => {
         if (!isRunning) {
             const now = Date.now();
@@ -31,7 +31,6 @@ export default function Home() {
 
     const handleReset = () => {
         setTime(0);
-
     };
 
     const formatTime = (milliseconds) => {
@@ -48,7 +47,7 @@ export default function Home() {
                 <button
                     onClick={handleStart}
                     disabled={isRunning}
-                    className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
+                    className='px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50'
                 >
                     شروع
                 </button>

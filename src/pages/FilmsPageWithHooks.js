@@ -32,12 +32,10 @@ export default function FilmsPageWithHooks() {
         backgroundColor: '#f5f5f5'
     };
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+
 
     return (
-        <div style={containerStyle}>
+        <>{loading ? <div>Loading...</div> : <div style={containerStyle}>
             {movies.map((movie) => (
                 <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
                     <div style={{
@@ -63,6 +61,6 @@ export default function FilmsPageWithHooks() {
                     </div>
                 </Link>
             ))}
-        </div>
+        </div>}</>
     );
 }
