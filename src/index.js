@@ -12,6 +12,7 @@ import NoPage from './pages/NoPage';
 import ProductPage from './pages/ProductPage';
 import FilmsPageWithHooks from './pages/FilmsPageWithHooks';
 import HomeWithUseEffect from './pages/HomeWithUseEffect';
+import FilmsPageWithMui from './pages/FilmsPageWithMui';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,7 +22,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomeWithUseEffect />} />
-          <Route path="films" element={<FilmsPageWithHooks />} />
+          <Route path="films" element={<FilmsPageWithMui />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
