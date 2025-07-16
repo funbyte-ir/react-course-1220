@@ -5,7 +5,6 @@ import {
     CardContent,
 
     Skeleton,
-    useTheme,
 } from '@mui/material';
 import FilmCard from "../components/FilmCard";
 
@@ -14,7 +13,6 @@ import FilmCard from "../components/FilmCard";
 export default function FilmsPageWithMui() {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
-    const theme = useTheme();
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -34,7 +32,7 @@ export default function FilmsPageWithMui() {
     return (
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4">
             {loading ? (
-                Array.from({ length: 6 }).map((_, index) => (
+                Array.from({ length: 9 }).map((_, index) => (
                     <Card key={index} sx={{ borderRadius: "20px" }}>
                         <Skeleton variant="rectangular" sx={{ height: "210px" }} />
                         <CardContent>
