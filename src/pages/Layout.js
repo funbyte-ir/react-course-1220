@@ -14,6 +14,9 @@ export default function Layout() {
           <li>
             <Link to="/products" className=" hover:text-gray-600">محصولات</Link>
           </li>
+          <li>
+            <Link to="/game" className=" hover:text-gray-600">بازی</Link>
+          </li>
         </ul>
       </nav>
       <Outlet />
