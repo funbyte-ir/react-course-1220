@@ -24,6 +24,7 @@ function GamePage() {
         // ذخیره کن و نوبت رو تغییر بده
         setBoard(updatedBoard);
         setIsXTurn(!isXTurn);
+        
     };
 
     const resetGame = () => {
