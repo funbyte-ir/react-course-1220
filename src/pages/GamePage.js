@@ -7,11 +7,22 @@ function GamePage() {
     const winner = calculateWinner(board);
 
     const handleClick = (index) => {
-        if (board[index] || winner) return;
+        // اگر خانه‌ای قبلاً پر شده یا بازی تمام شده باشه، کاری نکن
+        if (board[index]) return;
+        if (winner) return;
 
-        const newBoard = [...board];
-        newBoard[index] = isXTurn ? "X" : "O";
-        setBoard(newBoard);
+        // نسخه جدید صفحه بازی رو بساز
+        // let updatedBoard = board.slice();
+        // const updatedBoard = Array.from(board);
+        const updatedBoard = [...board];
+        if (isXTurn) {
+            updatedBoard[index] = "X";
+        } else {
+            updatedBoard[index] = "O";
+        }
+
+        // ذخیره کن و نوبت رو تغییر بده
+        setBoard(updatedBoard);
         setIsXTurn(!isXTurn);
     };
 
