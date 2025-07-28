@@ -4,6 +4,7 @@ import React, { useState } from "react";
 function GamePage() {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = useState(true);
+
     const winner = calculateWinner(board);
 
     const handleClick = (index) => {
@@ -24,7 +25,6 @@ function GamePage() {
         // ذخیره کن و نوبت رو تغییر بده
         setBoard(updatedBoard);
         setIsXTurn(!isXTurn);
-        
     };
 
     const resetGame = () => {
@@ -66,7 +66,7 @@ function GamePage() {
     );
 }
 
-function calculateWinner(cells) {
+function calculateWinner(board) {
     const lines = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8],
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -74,8 +74,8 @@ function calculateWinner(cells) {
     ];
 
     for (let [a, b, c] of lines) {
-        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
-            return cells[a];
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return board[a];
         }
     }
 
