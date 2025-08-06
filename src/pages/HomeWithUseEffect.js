@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { MyThemeContext } from "../App";
 
 export default function HomeWithUseEffect() {
-
+    const { theme } = useContext(MyThemeContext);
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     const [startTime, setStartTime] = useState(0);
@@ -45,8 +47,8 @@ export default function HomeWithUseEffect() {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen gap-4">
-            <h1 className="text-4xl font-bold">{formatTime(time)}</h1>
+        <div className={(theme === 'light' ? 'bg-gray-100 text-gray-800' : 'bg-gray-800 text-gray-100') + " flex flex-col justify-center items-center h-screen gap-4"}>
+            <h1 className={(theme === 'light' ? 'text-gray-800' : 'text-white') + " text-4xl font-bold"}>{formatTime(time)}</h1>
             <div className="flex gap-4">
                 <button
                     onClick={handleStart}

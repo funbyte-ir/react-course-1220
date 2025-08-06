@@ -17,24 +17,9 @@ import GamePage from './pages/GamePage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomeWithUseEffect />} />
-          <Route path="films" element={<FilmsPageWithMui />} />
-          <Route path="products" element={<ProductsPage />} />
-          <Route path="game" element={<GamePage />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-        <Route path="product" element={<ProductPage />} />
-
-
-      </Routes>
-    </BrowserRouter>
-
-  </React.StrictMode>
+  <App />
 );
 
 reportWebVitals();
