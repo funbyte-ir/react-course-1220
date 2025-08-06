@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { MyThemeContext } from "../App";
 import { CiDark, CiLight } from "react-icons/ci";
 
-export default function Layout() {
+export default function Layout({theme, setTheme}) {
   const { theme, setTheme } = useContext(MyThemeContext);
   return (
     <>

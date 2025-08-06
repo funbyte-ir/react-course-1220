@@ -20,7 +20,7 @@ export const MyThemeContext = createContext();
 
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   return (
 
@@ -28,8 +28,8 @@ function App() {
       <MyThemeContext.Provider value={{ theme, setTheme }}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomeWithUseEffect />} />
+            <Route path="/" element={<Layout theme={theme} setTheme={setTheme}/>}>
+              <Route index element={<HomeWithUseEffect theme={theme}/>} />
               <Route path="films" element={<FilmsPageWithMui />} />
               <Route path="products" element={<ProductsPage />} />
               <Route path="game" element={<GamePage />} />
